@@ -1,17 +1,22 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    for (let i2 = i + 1; i2 < array.length; i2++) {
+      if ((array[i] + array[i2]) === target) return true;
+    }
+  }
+  return false;
 }
 
 /* 
-  Write the Big O time complexity of your function here
+  O(n^2)
 */
 
 /* 
-  Add your pseudocode here
+  Checks if array has two numbers that add up to the target
 */
 
 /*
-  Add written explanation of your solution here
+  Uses one loop to assign a number from the array to a variable, and a second loop to run through the rest of the array while checking if the target is achieved
 */
 
 // You can run `node index.js` to view these console logs
